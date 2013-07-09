@@ -1,0 +1,82 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1"
+        android:stretchColumns="1" >
+
+        <EditText
+            android:id="@+id/name"
+            android:hint="NAME"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/addr"
+            android:hint="ADDRESS"
+            android:inputType="textPostalAddress" />
+
+        <TableRow>
+
+            <TextView android:text="Type:" />
+
+            <RadioGroup android:id="@+id/types" >
+
+                <RadioButton
+                    android:id="@+id/work"
+                    android:checked="true"
+                    android:text="Work" />
+
+                <RadioButton
+                    android:id="@+id/Family"
+                    android:text="Family" />
+
+                <RadioButton
+                    android:id="@+id/friend"
+                    android:text="Friend" />
+
+                <RadioButton
+                    android:id="@+id/emergency"
+                    android:text="Emergency" />
+
+                <RadioButton
+                    android:id="@+id/others"
+                    android:text="Others" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Location:" />
+
+            <TextView
+                android:id="@+id/location"
+                android:text="00,00" />
+        </TableRow>
+
+        <EditText
+            android:id="@+id/notes"
+            android:layout_marginTop="4dip"
+            android:layout_span="2"
+            android:gravity="top"
+            android:hint="Notes"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:maxLines="2"
+            android:scrollHorizontally="false" />
+
+        <EditText
+            android:id="@+id/feed"
+            android:layout_span="2"
+            android:hint="Feed URL" />
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_span="2"
+            android:hint="Contact"
+            android:inputType="number" />
+    </TableLayout>
+
+</ScrollView>
